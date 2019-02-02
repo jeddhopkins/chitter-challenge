@@ -5,7 +5,7 @@ require 'sinatra'
 require 'rspec'
 require 'timecop'
 require_relative './../app.rb'
-Capybara.app = Chitter
+Capybara.app = ChitterChallenge
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -18,7 +18,8 @@ RSpec.configure do |config|
 
   config.include Rack::Test::Methods
   config.before(:each) do
-    DataMapper.setup(:default, 'postgres://localhost/chitter_test')
+    DataMapper.setup(:default, 'postgres://localhost/Chitter_Test')
     DataMapper.finalize
     DataMapper.auto_migrate!
   end
+end
