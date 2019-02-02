@@ -17,7 +17,7 @@ class ChitterChallenge < Sinatra::Base
   configure :development do
     DataMapper.setup(:default, 'postgres://localhost/Chitter')
     DataMapper.finalize
-    DataMapper.auto_migrate!
+    DataMapper.auto_upgrade!
   end
 
   get '/' do
@@ -25,7 +25,15 @@ class ChitterChallenge < Sinatra::Base
   end
 
   get '/tweetfeed' do
-    erb :tweetfeed 
+    erb :tweetfeed
+  end
+
+  get '/login' do
+    erb :login
+  end
+
+  get '/signup' do
+    erb :signup
   end
 
 
