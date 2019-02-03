@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta>
-    <title>Chitter Log In</title>
+    <title>Log In</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -13,7 +14,26 @@
     </div>
 
     <div class="main">
-      <h1>Log In</h1>
+      <h1>Welcome to Chitter</h1>
+      <form class="tweetfeed" action="/tweetfeed" method="get">
+        <input class="button button1" type="Submit" name="tweetfeed" value="View the TweetFeed">
+      </form>
+
+      <h2>Please <u><i>sign up</i></u> or <u><i>log in</i></u> to live tweet!</h2>
+
+      <div class="login">
+        <form class="login" action="/tweetfeed" method="get">
+          <input placeholder="Email" type="email" required>
+          <input placeholder="Password" type="password" pattern=".{5,10}" required title="password must be between 5 to 10 characters">
+          <input class="button2" type="submit" value="Submit">
+        </form>
+      </div>
+      <hr>
+      <div class="signup">
+        <form class="signup" action="/signup" method="get">
+          <input class="button button1" type="Submit" value="Sign Up">
+        </form>
+      </div>
     </div>
 
     <div class="footer">
