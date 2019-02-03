@@ -10,4 +10,6 @@ class Tweet
   property :id, Serial
   property :body, String
   property :created_at, DateTime
+
+  belongs_to :user
 end
