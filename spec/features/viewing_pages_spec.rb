@@ -11,12 +11,12 @@ feature 'Viewing web pages' do
 
   scenario 'Accessing the log in page' do
     visit '/login'
-    expect(page).to have_content 'Log In'
+    expect(page).to have_button 'Submit'
   end
 
   scenario 'Accessing the sign up page' do
     visit '/signup'
-    expect(page).to have_content 'Sign Up'
+    expect(page).to have_content 'I agree to the terms and conditions'
   end
 
 end
